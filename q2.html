@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+
+        .container{
+            margin-top: 10px;
+            height: 10%;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            background-color: aqua;
+            padding-bottom: 15%;
+        }
+
+        .tble{
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 0.5%;
+            height: 100%;
+        }
+        h1{
+            text-align: center;
+        }
+        th,td{
+            text-align: center;
+            height: 100%;
+            padding: 0.5%;
+        }
+        .data{
+            height: 40%;
+            width: 80%;
+
+        }
+        input{
+            height: 50%;
+            width: 10%;
+        }
+        .insbt{
+            height: 50%;
+            width: 10%;
+        }
+        .searchele{
+            margin-left: 15%;
+            height: 40%;
+        }
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <h1>Bus Managemnet System</h1>
+
+    <div class="container">
+
+        <h1>buses</h1>
+        <div class="data">
+            <form onsubmit="insert(event)">
+            <input type="text" placeholder="Name" id="name"/>
+            <input type="text" placeholder="Source" id="source"/>
+            <input type="text" placeholder="Destination" id="destination"/>
+            <input type="number" placeholder="Number" id="number"/>
+            <input type="number" placeholder="Passenger Capacity" id="pname"/>
+            <input type="submit" class="insbt"/>
+            </form>
+        </div>
+
+        <div class="searchele">
+           <input type="text" placeholder="SEarch here" onkeyup="search()" id="searching">
+        </div>
+
+        <table border="1" cellspacing=0 class="tble">
+            <thead>
+                <tr>
+                    <th>SR no</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Bus number</th>
+                    <th>Oerations</th>
+                 </tr>
+            </thead>
+
+            <tbody id="tblerows">
+
+            </tbody>
+        </table>
+    </div>
+   <script src="q2.js"></script>    
+</body>
+</html>
